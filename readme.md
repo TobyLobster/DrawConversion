@@ -34,7 +34,7 @@ It handles all the standard objects found in !Draw.
 
 + **Options** All page sizes are supported, in portrait or landscape.
 
-Find out [what I learned](insight/insights.md) about the format while writing this convertor.
+Find out [what I learned](insights/insights.md) about the format while writing this convertor.
 
 ## Requirements
 The tool is written in Python 3. The only dependency is the [Python Image Library ('Pillow')](https://pillow.readthedocs.io/en/latest/installation.html).
@@ -149,6 +149,6 @@ Use the command line ```--fonts``` option to specify the INI filepath.
 ## Other Links
 If you are writing your own convertor, then you probably want some example Draw files for testing. Try 
     [Test Examples](https://gitlab.riscosopen.org/RiscOS/Sources/Apps/Draw/-/tree/master/Test) and 
-    [Acron Draw](http://fileformats.archiveteam.org/wiki/Acorn_Draw). 
+    [Acorn Draw](http://fileformats.archiveteam.org/wiki/Acorn_Draw). 
 
 See also the RISC OS Open sources for the !Draw application (written in C) [!Draw source code](https://gitlab.riscosopen.org/RiscOS/Sources/Apps/Draw)
