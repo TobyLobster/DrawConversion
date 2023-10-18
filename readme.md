@@ -18,6 +18,8 @@ It handles all the standard objects found in !Draw.
 
 + **Transformed Text** Full matrix transformation is supported, including scale, rotation, and skew.
 
+![Transformed Text](insights/assets/rect1.draw.svg)
+
 + **Text Area** Rich formatted text: Text is split into newspaper-like columns. Paragraphs, leadings, margins, left, right, centre and full justification, font changes, text colours, underlines, vertical moves (for super/subscript) are all supported.
 
 + **Paths** All path commands are supported, including straight and Bezier curves with colour, thickness, and fill colour. All start and end cap combinations are supported, including caps on the ends of each dash along dashed lines. Triangle caps width/length is supported. Join styles are supported. Winding rules (which can affect the area filled) are also supported.
@@ -25,6 +27,8 @@ It handles all the standard objects found in !Draw.
 + **Sprites** All RISC OS sprite data is decoded, then converted to PNG data and embedded within the SVG file.
 
 + **Transformed Sprite** Full matrix transformation is supported, including scale, rotation, and skew.
+
+![Transformed sprites](insights/assets/dpi.draw.svg)
 
 + **JPEG** Full matrix transformation is supported, including scale, rotation, and skew. JPEG data is embedded in the SVG.
 
@@ -130,27 +134,3 @@ Find out [what I learned](insights/insights.md) about the format while writing t
 * Compression: These seem to be uncommon, and reserved for storing SVG files in a compressed form on servers. There are 3rd party tools to create the compressed form of SVG known as .svgz files.
 * Storing image files externally. All image files are embedded within the SVG file itself. There are security concerns/restrictions that discourage/prevent using external images in SVGs, so it is best avoided. See [SVG Security](https://www.w3.org/wiki/SVG_Security) and [Secure Static Mode](https://www.w3.org/TR/SVG/conform.html#secure-static-mode).
 * Third party applications have added their own Draw object types. They are skipped (ignored). There are too many of them, and not enough format information nor examples of them.
-
-## Links to other convertors
-| Link                                                      | Notes                                |
-|:----------------------------------------------------------|:-------------------------------------|
-| [pkg-draw2svg](https://ssjools.hopto.org/software/pkg-draw2svg)    | RISC OS only, doesn't convert images |
-| [XP1Dr2SVG](https://clive.semmens.org.uk/RISCOS/XP1Dr2SVG.html) | RISC OS only, doesn't convert images |
-| [dataconverters](https://github.com/tautology0/dataconverters)       | RISC OS, but basically plain C with a couple of RISC OS header files for constants. Doesn't handle transformed text or JPEGs. |
-| [drawfile-render](https://github.com/dcf21/drawfile-render)           | Python. Doesn't handle path endcaps? Requires Cairo (cairocffi) package |
-| [stardot forum topic](https://stardot.org.uk/forums/viewtopic.php?t=3936) | Windows only. Doesn't convert images etc. A 'Basic Draw File Converter' |
-
-## Other Related tools
-| Link                                                                          | Notes                                |
-|:------------------------------------------------------------------------------|:-------------------------------------|
-| [drawview](http://www.keelhaul.me.uk/acorn/drawview/)                              | 'DrawView' viewer application (Linux/Unix). |
-| [Drawfile](https://www.boddie.org.uk/david/Projects/Python/Drawfile/index.html)    | Python. Allows reading and writing of Draw files into classes (but not writing to SVG). |
-| [drawview](https://github.com/martenjj/drawview)                                   | C++. Requires Qt 5, KDE framework, and CMake/GNU autotools. Allows Draw files to be viewed on Linux/Unix systems. Export to SVG supported? |
-| [Draw&nbsp;Plus](http://www.keelhaul.me.uk/acorn/)                                       | 'Draw Plus' editing application. |
-
-## Other Links
-If you are writing your own convertor, then you probably want some example Draw files for testing. Try 
-    [Test Examples](https://gitlab.riscosopen.org/RiscOS/Sources/Apps/Draw/-/tree/master/Test) and 
-    [Acorn Draw](http://fileformats.archiveteam.org/wiki/Acorn_Draw). 
-
-See also the RISC OS Open sources for the !Draw application (written in C) [!Draw source code](https://gitlab.riscosopen.org/RiscOS/Sources/Apps/Draw)
