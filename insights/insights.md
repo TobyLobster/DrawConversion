@@ -73,7 +73,7 @@ If you are writing your own convertor, then you probably want some example Draw 
 
 | Link                                                                          | Notes                                |
 |:------------------------------------------------------------------------------|:-------------------------------------|
-| [examples.zip](assets/examples.zip) | Some example files in a zip file, mostly my own. |
+| [Examples.zip](assets/Examples.zip) | Some example files in a zip file, mostly my own. |
 | [Test Examples](https://gitlab.riscosopen.org/RiscOS/Sources/Apps/Draw/-/tree/master/Test) | Examples in the RISC OS !Draw source code. |
 | [Random Draw files](http://fileformats.archiveteam.org/wiki/Acorn_Draw) | Links to some random clip art. |
 
