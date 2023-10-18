@@ -5,10 +5,10 @@ The regular set of RISC OS Fonts do not contain all the possible glyphs. They al
 
 * *NewHall.Medium* character code 0x81 (with no alphabet specified and also *Latin1* alphabet) displays a breve, but the Italic and Bold versions do not.
 * *NewHall.Medium* and *NewHall.Medium.Italic* with the *Latin9* alphabet also display the breve (but not in the Bold fonts).
-* In the *Cyrillic* alphabet (in multiple fonts), RISC OS puts a HYPHEN-MINUS at 0xae, which is not the standard (perhaps this was meant to be at 0xad, the soft-hyphen).
+* In the *Cyrillic* alphabet (in multiple fonts), RISC OS puts a 'Hyphen-Minus' at 0xae, which is not the standard (perhaps this was meant to be at 0xad, the soft-hyphen).
 * *Corpus.Medium* with *Greek* alphabet has 0xaf set to what looks like 'Latin Subscript Small Letter O', which is non-standard (ISO/IEC 8859-7, should be a horizontal bar).
-* *Sassoon* with the *Welsh* alphabet has 0xac and 0xbc set to E and e with tildes, which is non-standard (ISO IR-182, should be Y and y with grave accents.)
-* *Sassoon* with the *Hebrew* alphabet (has 0xaf set to 'EFF' in small letters, which is non-standard (ISO/IEC 8859-8, should be a Macron).
+* *Sassoon* with the *Welsh* alphabet has 0xac and 0xbc set to 'Ẽ' and 'ẽ', which is non-standard (ISO IR-182, should be 'Ỳ' and 'ỳ'.)
+* *Sassoon* with the *Hebrew* alphabet (has 0xaf set to 'EFF' in small caps, which is non-standard (ISO/IEC 8859-8, should be a Macron). Clearly a reference to the [Electronic Font Foundry](https://en.wikipedia.org/wiki/The_Electronic_Font_Foundry).
 * *System* font, character code 0x87 shows a subscript 8 and superscript 7, which seems like a placeholder rather than a design choice.
 * *Swiss.Monospaced.Bold.italic* is named inconsistently with the word 'italic' not capitalised.
 

@@ -2,11 +2,11 @@
 
 ## Introduction
 
-'Draw To SVG' converts Acorn's !Draw files to SVG format. 
+*Draw To SVG* converts files from Acorn's *!Draw* application to SVG format. Here is an example Draw file converted to SVG:
 
 ![Example file converted from Draw to SVG](assets/DrawDemo.svg)
 
-It is a command line tool written in Python. It aims to be accurate and comprehensive, while still being easy to use. If you find issues, please let me know, preferably with an example !Draw file for testing purposes.
+It is a command line tool written in Python. It aims to be comprehensive and accurate, while still being easy to use. If you find issues, please let me know, preferably with an example Draw file so I can test it.
 
 It handles all the standard objects found in !Draw.
 
@@ -33,8 +33,6 @@ It handles all the standard objects found in !Draw.
 + **Tagged** I've not seen a draw file use this in the wild, but I've written some code that should work in theory (*crosses fingers*).
 
 + **Options** All page sizes are supported, in portrait or landscape.
-
-Find out [what I learned](insights/insights.md) about the format while writing this convertor.
 
 ## Requirements
 The tool is written in Python 3. The only dependency is the [Python Image Library ('Pillow')](https://pillow.readthedocs.io/en/latest/installation.html).
@@ -109,6 +107,10 @@ WimpSymbol = WimpSymbol,Zapf Dingbats,ZapfDingbats,sans-serif
 ```
 
 Use the command line ```--fonts``` option to specify the INI filepath.
+
+## What I Learned
+
+Find out [what I learned](insights/insights.md) about the format while writing this convertor.
 
 ## Limitations
 
