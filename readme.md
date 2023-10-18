@@ -12,7 +12,7 @@ It handles all the standard objects found in !Draw.
 
 + **Fonts** RISC OS Fonts are translated to similar modern fonts. A default font stack is provided for each RISC OS font to give them a similar look. A  configuration file can customise the font stacks used if needed.
 
-+ **Character Sets and Alphabets** Every character is translated to the UTF-8 standard. Particular attention is given to the standard RISC OS fonts (*Corpus*, *Homerton*, *Newhall*, *Swiss*, *Trinity*, *Sassoon*, *Selwyn*, *Sidney* and *System*). The exact glyphs in each font are translated to UTF-8 standard. Fonts with an explicit alphabet specified (using '\Ffont\Ealphabet' in the font table) are also correctly translated.
++ **Character Sets and Alphabets** Every character is translated to the UTF-8 standard. Particular attention is given to the standard RISC OS fonts (*Corpus*, *Homerton*, *Newhall*, *Swiss*, *Trinity*, *Sassoon*, *Selwyn*, *Sidney* and *System*). The exact glyphs in each font are translated to UTF-8 standard. Fonts with an explicit alphabet specified (using '\Ffont\Ealphabet' in the font table) are also correctly translated. See the [font tables](insights/fonts.md) to see all the glyphs.
 
 + **Regular Text** Text is positioned, sized, and spaced to match the the original text. Right to left text, reversed text and underlined text are all supported. Kerning is always applied. The !Draw UI doesn't support entering newlines in regular text objects, but they are respected here because other utilities that create Draw files can create them.
 
