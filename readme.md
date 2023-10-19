@@ -112,10 +112,6 @@ WimpSymbol = WimpSymbol,Zapf Dingbats,ZapfDingbats,sans-serif
 
 Use the command line ```--fonts``` option to specify the INI filepath.
 
-## What I Learned
-
-Find out [what I learned](insights/insights.md) about the format while writing this convertor.
-
 ## Limitations
 
 * A small quirk of the !Draw renderer is that an underline does not change its vertical position when superscripts or subscripts ('vertical moves') are applied. This effect would (a) be difficult to replicate in SVG properly, and (b) it also really feels more useful to follow the text being underlined anyway.
@@ -134,3 +130,7 @@ Find out [what I learned](insights/insights.md) about the format while writing t
 * Compression: These seem to be uncommon, and reserved for storing SVG files in a compressed form on servers. There are 3rd party tools to create the compressed form of SVG known as .svgz files.
 * Storing image files externally. All image files are embedded within the SVG file itself. There are security concerns/restrictions that discourage/prevent using external images in SVGs, so it is best avoided. See [SVG Security](https://www.w3.org/wiki/SVG_Security) and [Secure Static Mode](https://www.w3.org/TR/SVG/conform.html#secure-static-mode).
 * Third party applications have added their own Draw object types. They are skipped (ignored). There are too many of them, and not enough format information nor examples of them.
+
+## What I Learned
+
+Find out [what I learned](insights/insights.md) about the format while writing this convertor.
