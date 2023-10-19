@@ -18,7 +18,7 @@ It handles all the standard objects found in !Draw.
 
 + **Transformed Text** Full matrix transformation is supported, including scale, rotation, and skew.
 
-![Transformed Text](insights/assets/rect1.draw.svg)
+![Transformed Text](insights/assets/rect2.draw.svg)
 
 + **Text Area** Rich formatted text: Text is split into newspaper-like columns. Paragraphs, leadings, margins, left, right, centre and full justification, font changes, text colours, underlines, vertical moves (for super/subscript) are all supported.
 
@@ -50,23 +50,23 @@ usage: draw_to_svg.py <options>
 Converts Acorn's Draw files to SVG.
 
 options:
-  --help                 show this help message and exit
-  --dir <directory>      search recursively from <directory> for .draw files to convert (overrides --input and --output)
-  --input INPUT          input draw filepath
-  --output OUTPUT        output SVG filepath
-  --utf8                 assume all text in the Draw file is already UTF8 encoded, no conversion needed
-  --tspans               uses SVG <tspan>s to output text areas (but these are not well supported by SVG renderers)
-  -v                     output verbosity level 1, which shows each filename as it's being processed
-  -vv                    output verbosity level 2, which shows lots of debugging data as it's being processed
-  --basic-underlines     use basic underlines (no colour or thickness) to help out Safari that can't cope
-  --no-bbox              ignore the bounding box width when outputting text
-  --fonts <ini-file>     fonts ini file listing the replacement font stacks
-  --fit-border <amount>  Set SVG page size to match Draw content with a border amount in pixels or percentage (e.g. '50px' or '20%')
-  --one-byte-types       Some applications use a one byte object type, as opposed to the default two byte value
+  -h   --help                 show this help message and exit
+  -d   --dir <directory>      search recursively from <directory> for .draw files to convert (overrides --input and --output)
+  -i   --input INPUT          input draw filepath
+  -o   --output OUTPUT        output SVG filepath
+  -8   --utf8                 assume all text in the Draw file is already UTF8 encoded, no conversion needed
+  -s   --tspans               uses SVG <tspan>s to output text areas (but these are not well supported by SVG renderers)
+  -v                          output verbosity level 1, which shows each filename as it's being processed
+  -vv                         output verbosity level 2, which shows lots of debugging data as it's being processed
+  -u   --basic-underlines     use basic underlines (no colour or thickness) to help out Safari that can't cope
+  -n   --no-bbox              ignore the bounding box width when outputting text
+  -f   --fonts <ini-file>     fonts ini file listing the replacement font stacks
+  -b   --fit-border <amount>  Set SVG page size to match Draw content with a border amount in pixels or percentage (e.g. '50px' or '20%')
+  -1   --one-byte-types       Some applications use a one byte object type, as opposed to the default two byte value
 
 For debugging the tool:
-  --label-debug          add debugging labels to each object
-  --show_boxes           for debugging purposes, show the bounding box for each object
+  -l   --label-debug          add debugging labels to each object
+  -x   --show-boxes           for debugging purposes, show the bounding box for each object
 ```
 
 ### Python Module

@@ -255,7 +255,7 @@ class Point:
                          (other.y - self.y)*(other.y - self.y))
 
     def __repr__(self):
-        return "({0},{1})".format(self.x, self.y)
+        return "({0},{1})".format("{0:.4f}".format(self.x), "{0:.4f}".format(self.y))
 
 class Mat:
     """Represents a 3x3 matrix of the form:
@@ -4050,7 +4050,7 @@ class Convertor:
         font_aspect_ratio = svg_fontsize_pixels.y / svg_fontsize_pixels.x
 
         text_width = self.get_proper_text_width(box_width, box_height, matrix.a, matrix.b, matrix.c, matrix.d, -rotation, -skew.x, svg_fontsize_pixels.y)
-        #print("box_width: ", box_width, "box_height:", box_height, "true text width:", text_width, "matrix:", matrix.a, matrix.b, matrix.c, matrix.d, "rotation:", rotation, "skew:", skew, "font size (px):", svg_fontsize_pixels)
+        #print("box_width: ", self.dp(box_width), "box_height:", self.dp(box_height), "true text width:", self.dp(text_width), "matrix:", self.dp(matrix.a), self.dp(matrix.b), self.dp(matrix.c), self.dp(matrix.d), "rotation:", self.dp(rotation), "skew:", skew, "font size (px):", svg_fontsize_pixels)
 
         # Take font aspect ratio into account by scaling in Y
         scale.y *= font_aspect_ratio
@@ -4097,8 +4097,8 @@ class Convertor:
             self.dp(math.degrees(angle)),
             self.dp(math.degrees(skew.x)),
             self.dp(math.degrees(skew.y)),
-            scale.x,
-            scale.y)
+            self.dp(scale.x),
+            self.dp(scale.y))
 
         if (font_flags & 2) == 2:
             transform += ' direction="rtl"'
@@ -4382,23 +4382,23 @@ class MyParser(argparse.ArgumentParser):
 Converts Acorn's Draw files to SVG.
 
 options:
-  --help                 show this help message and exit
-  --dir <directory>      search recursively from <directory> for .draw files to convert (overrides --input and --output)
-  --input INPUT          input draw filepath
-  --output OUTPUT        output SVG filepath
-  --utf8                 assume all text in the Draw file is already UTF8 encoded, no conversion needed
-  --tspans               uses SVG <tspan>s to output text areas (but these are not well supported by SVG renderers)
-  -v                     output verbosity level 1, which shows each filename as it's being processed
-  -vv                    output verbosity level 2, which shows lots of debugging data as it's being processed
-  --basic-underlines     use basic underlines (no colour or thickness) to help out Safari that can't cope
-  --no-bbox              ignore the bounding box width when outputting text
-  --fonts <ini-file>     fonts ini file listing the replacement font stacks
-  --fit-border <amount>  Set SVG page size to match Draw content with a border amount in pixels or percentage (e.g. '50px' or '20%')
-  --one-byte-types       Some applications use a one byte object type, as opposed to the default two byte value
+  -h   --help                 show this help message and exit
+  -d   --dir <directory>      search recursively from <directory> for .draw files to convert (overrides --input and --output)
+  -i   --input INPUT          input draw filepath
+  -o   --output OUTPUT        output SVG filepath
+  -8   --utf8                 assume all text in the Draw file is already UTF8 encoded, no conversion needed
+  -s   --tspans               uses SVG <tspan>s to output text areas (but these are not well supported by SVG renderers)
+  -v                          output verbosity level 1, which shows each filename as it's being processed
+  -vv                         output verbosity level 2, which shows lots of debugging data as it's being processed
+  -u   --basic-underlines     use basic underlines (no colour or thickness) to help out Safari that can't cope
+  -n   --no-bbox              ignore the bounding box width when outputting text
+  -f   --fonts <ini-file>     fonts ini file listing the replacement font stacks
+  -b   --fit-border <amount>  Set SVG page size to match Draw content with a border amount in pixels or percentage (e.g. '50px' or '20%')
+  -1   --one-byte-types       Some applications use a one byte object type, as opposed to the default two byte value
 
 For debugging the tool:
-  --label-debug          add debugging labels to each object
-  --show_boxes           for debugging purposes, show the bounding box for each object
+  -l   --label-debug          add debugging labels to each object
+  -x   --show-boxes           for debugging purposes, show the bounding box for each object
 """, file=venue)
 
 if __name__ == '__main__':
@@ -4414,7 +4414,7 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--tspans',           help="uses SVG <tspan>s to output text areas (but these are not well supported by SVG renderers)", action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument('-v', '--verbose',          help="output verbosity (0, 1, or 2)", action='count', default=0)
     parser.add_argument('-l', '--label-debug',      help="add debugging labels to each object", action=argparse.BooleanOptionalAction, default=False)
-    parser.add_argument('-x', '--show_boxes',       help="for debugging purposes, show bounding box for each object", action=argparse.BooleanOptionalAction, default=False)
+    parser.add_argument('-x', '--show-boxes',       help="for debugging purposes, show bounding box for each object", action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument('-u', '--basic-underlines', help="use basic underlines (no colour or thickness) to help out Safari that can't cope", action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument('-n', '--no-bbox',          help="ignore the bounding box width when outputting text", action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument('-f', '--fonts',            help="fonts ini file listing the replacement font stacks", metavar="<ini-file>")
