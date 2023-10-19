@@ -59,12 +59,12 @@ See [here](fonts.md) for details.
 | [dataconverters](https://github.com/tautology0/dataconverters)       | RISC OS, but basically plain C with a couple of RISC OS header files for constants. Doesn't handle transformed text or JPEGs. |
 | [drawfile-render](https://github.com/dcf21/drawfile-render)           | Python. Doesn't handle path endcaps? Requires Cairo (cairocffi) package |
 | [stardot forum topic](https://stardot.org.uk/forums/viewtopic.php?t=3936) | Windows only. Doesn't convert images etc. A 'Basic Draw File Converter' |
+| [Drawfile](https://gitlab.com/dboddie/drawfile)    | Python. Allows reading and writing of Draw files into classes, and includes a tool to convert to SVG. |
 
 ## Other Related tools
 | Link                                                                          | Notes                                |
 |:------------------------------------------------------------------------------|:-------------------------------------|
 | [drawview](http://www.keelhaul.me.uk/acorn/drawview/)                              | 'DrawView' viewer application (Linux/Unix). |
-| [Drawfile](https://www.boddie.org.uk/david/Projects/Python/Drawfile/index.html)    | Python. Allows reading and writing of Draw files into classes (but not writing to SVG). |
 | [drawview](https://github.com/martenjj/drawview)                                   | C++. Requires Qt 5, KDE framework, and CMake/GNU autotools. Allows Draw files to be viewed on Linux/Unix systems. Export to SVG supported? |
 | [Draw&nbsp;Plus](http://www.keelhaul.me.uk/acorn/)                                       | 'Draw Plus' editing application. |
 
